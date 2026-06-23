@@ -1,0 +1,14 @@
+.plant-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plant-list .plant-item {
+    width: 20%;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

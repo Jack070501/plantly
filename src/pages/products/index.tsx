@@ -3,7 +3,7 @@ import type { Plant } from "./plant";
 import { Link } from "react-router-dom";
 
 export const Products = () => {
-    const [plants, setPlants] = useState<Plant[]>([]);  
+    const [plants, setPlants] = useState<Plant[]>([]);
 
     useEffect(() => {
         async function fetchPlants() {
@@ -18,20 +18,23 @@ export const Products = () => {
         }
         fetchPlants();
     }, []);
-    
-    return(
+
+    return (
         <>
             <h2>Plants like</h2>
             {plants.length > 0 && (
-                <article className="plant-list">
-                {plants.map((plant) => (
-                        <Link to={`/products/${plant.id}`} key={plant.id}>Trainer 
-                            <h3>{plant.name}</h3>
-                            <p>{plant.description}</p>
-                            <p>Price: &pound;{plant.price.toFixed(2)}</p>
-                        </Link>
+                <section className="plant-list">
+                    {plants.map((plant) => (
+                        <article className="plant-item">
+                            <Link to={`/products/${plant.id}`} key={plant.id}>Trainer
+                                <h3>{plant.name}</h3>
+                                <img src={plant.imageUrl} alt={plant.name} />
+                                <p>{plant.description}</p>
+                                <p>Price: &pound;{plant.price.toFixed(2)}</p>
+                            </Link>
+                        </article>
                     ))}
-                </article>
+                </section>
             )}
         </>
     )
