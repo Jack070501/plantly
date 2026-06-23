@@ -1,0 +1,25 @@
+{
+    "plants": [
+        {
+            "id": "aloe-vera",
+            "name": "Aloe Vera",
+            "description": "A succulent plant species of the genus Aloe.",
+            "imageUrl": "aloe_vera.jpg",
+            "price": 15.99
+        },
+        {
+            "id": "snake-plant",
+            "name": "Snake Plant",
+            "description": "A hardy plant that can survive in low light conditions.",
+            "imageUrl": "snake_plant.jpg",
+            "price": 12.99
+        },
+        {
+            "id": "peace-lily",
+            "name": "Peace Lily",
+            "description": "A popular indoor plant known for its white flowers.",
+            "imageUrl": "peace_lily.jpg",
+            "price": 18.99
+        }
+    ]
+}
