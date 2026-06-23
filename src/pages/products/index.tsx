@@ -12,7 +12,7 @@ export const Products = () => {
                 <section className="plant-list">
                     {plants.map((plant) => (
                         <article className="plant-item">
-                            <Link to={`/products/${plant.id}`} key={plant.id} className="plant-link">Trainer
+                            <Link to={`/products/${plant.id}`} key={plant.id} className="plant-link">
                                 <h3>{plant.name}</h3>
                                 <img src={plant.imageUrl} alt={plant.name} />
                                 <p>{plant.description}</p>
