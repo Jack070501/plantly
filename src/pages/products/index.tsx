@@ -1,23 +1,10 @@
 import { useEffect, useState } from "react";
 import type { Plant } from "./plant";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 export const Products = () => {
-    const [plants, setPlants] = useState<Plant[]>([]);
 
-    useEffect(() => {
-        async function fetchPlants() {
-            try {
-                const res = await fetch("http://localhost:3000/plants");
-                const data = await res.json();
-                console.log("PLANTS DATA:", data);
-                setPlants(data);
-            } catch (error) {
-                console.error("Error fetching plants data:", error);
-            }
-        }
-        fetchPlants();
-    }, []);
+    const plants:Plant[] = useLoaderData();
 
     return (
         <>
@@ -26,7 +13,7 @@ export const Products = () => {
                 <section className="plant-list">
                     {plants.map((plant) => (
                         <article className="plant-item">
-                            <Link to={`/products/${plant.id}`} key={plant.id}>Trainer
+                            <Link to={`/products/${plant.id}`} key={plant.id} className="plant-link">Trainer
                                 <h3>{plant.name}</h3>
                                 <img src={plant.imageUrl} alt={plant.name} />
                                 <p>{plant.description}</p>
