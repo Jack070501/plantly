@@ -3,10 +3,11 @@ import { Home } from "./pages/home";
 import { Products } from "./pages/products";
 import { YourDetails } from "./pages/your-details";
 import { NotFound } from "./pages/not-found";
+import { RootLayout } from "./layouts/RootLayout";
 
 export const router = createBrowserRouter (
     createRoutesFromElements(
-        <Route path="/">
+        <Route path="/" element={<RootLayout />}>
             <Route index element={<Home/> } />
             <Route path="products" element={<Products/> } />
             <Route path="your-details" element={<YourDetails/> } />
