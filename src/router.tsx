@@ -5,7 +5,8 @@ import { YourDetails } from "./pages/your-details";
 import { NotFound } from "./pages/not-found";
 import { RootLayout } from "./layouts/RootLayout";
 import { ProductDetail } from "./pages/products/detail";
-import { loadProductData } from "./pages/products/plant";
+import { detailsLoader } from "./pages/your-details/loader";
+import { loadProductData } from "./pages/products/loader";
 
 export const router = createBrowserRouter (
     createRoutesFromElements(
@@ -15,7 +16,7 @@ export const router = createBrowserRouter (
                 <Route index element={<Products/>} loader={loadProductData} />
                 <Route path=":id" element={<ProductDetail/>} loader={loadProductData} />
             </Route>
-            <Route path="your-details" element={<YourDetails/>} />
+            <Route path="your-details" element={<YourDetails/> } loader={detailsLoader} />
             <Route path="*" element= {<NotFound/> } />
         </Route>
     )

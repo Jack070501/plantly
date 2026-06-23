@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import type { Plant } from "./plant";
 import { Link, useLoaderData } from "react-router-dom";
+import type { TPlant } from "../../types/plant";
 
 export const Products = () => {
 
-    const plants:Plant[] = useLoaderData();
+    const plants:TPlant[] = useLoaderData();
 
     return (
         <>

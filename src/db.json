@@ -54,5 +54,23 @@
             "price": 12,
             "imageUrl": "https://user-images.githubusercontent.com/118732445/203812745-c6d7dad7-5ddc-4513-8004-e348b7739d78.jpg"
         }
+    ],
+    "users": [
+        {
+            "id": "jackId",
+            "name": "Jack Hicks",
+            "email": "Jack@email.com",
+            "phone": "+445318008",
+            "mothersMaidenName": "Skywalker",
+            "hometown": "Hogsmeade"
+        },
+        {
+            "id": "philipId",
+            "name": "Philip Smith",
+            "email": "Philip@email.com",
+            "phone": "+4469420007",
+            "mothersMaidenName": "Solo",
+            "hometown": "Godric's Hollow"
+        }
     ]
 }

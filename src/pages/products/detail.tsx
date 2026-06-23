@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
-import type { Plant } from "./plant";
+import type { TPlant } from "../../types/plant";
 
 export const ProductDetail = () => {
-    const plant:Plant = useLoaderData();
+    const plant:TPlant = useLoaderData();
 
     return (
         <>
