@@ -1,4 +1,4 @@
-export type Plant = {
+export type TPlant = {
     id?: string;
     name: string;
     description: string;

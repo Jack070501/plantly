@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import type { Plant } from "./plant";
+import type { TPlant } from "../../types/plant";
 import { Link } from "react-router-dom";
 
 export const Products = () => {
-    const [plants, setPlants] = useState<Plant[]>([]);
+    const [plants, setPlants] = useState<TPlant[]>([]);  
 
     useEffect(() => {
         async function fetchPlants() {
