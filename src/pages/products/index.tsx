@@ -25,7 +25,7 @@ export const Products = () => {
             {plants.length > 0 && (
                 <article className="plant-list">
                 {plants.map((plant) => (
-                        <Link to="/products/${plant.id}" key={plant.id}>Trainer 
+                        <Link to={`/products/${plant.id}`} key={plant.id}>Trainer 
                             <h3>{plant.name}</h3>
                             <p>{plant.description}</p>
                             <p>Price: &pound;{plant.price.toFixed(2)}</p>
